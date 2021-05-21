@@ -220,36 +220,36 @@ pub fn main() anyerror!void {
     }
 
     // Part One
-    // {
-    //     var i: usize = 0;
-    //     while (i < nums.items.len) : (i += 1) {
-    //         const diff: i32 = 2020 - nums.items[i];
+    {
+        var i: usize = 0;
+        while (i < nums.items.len) : (i += 1) {
+            const diff: i32 = 2020 - nums.items[i];
 
-    //         var j: usize = i + 1;
-    //         while (j < nums.items.len) : (j += 1) {
-    //             if (nums.items[j] == diff) {
-    //                 print("Result: {d}\n", .{nums.items[i] * nums.items[j]});
-    //                 return;
-    //             }
-    //         }
-    //     }
-    // }
+            var j: usize = i + 1;
+            while (j < nums.items.len) : (j += 1) {
+                if (nums.items[j] == diff) {
+                    print("Result: {d}\n", .{nums.items[i] * nums.items[j]});
+                    return;
+                }
+            }
+        }
+    }
 
     // Part Two
-    // {
-    //     var i: usize = 0;
-    //     while (i < nums.items.len) : (i += 1) {
-    //         var j: usize = i + 1;
-    //         while (j < nums.items.len) : (j += 1) {
-    //             var k: usize = i + 2;
-    //             while (k < nums.items.len) : (k += 1) {
-    //                 var sum: i32 = nums.items[i] + nums.items[j] + nums.items[k];
-    //                 if (sum == 2020) {
-    //                     print("Result: {d}\n", .{nums.items[i] * nums.items[j] * nums.items[k]});
-    //                     return;
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
+    {
+        var i: usize = 0;
+        while (i < nums.items.len) : (i += 1) {
+            var j: usize = i + 1;
+            while (j < nums.items.len) : (j += 1) {
+                var k: usize = i + 2;
+                while (k < nums.items.len) : (k += 1) {
+                    var sum: i32 = nums.items[i] + nums.items[j] + nums.items[k];
+                    if (sum == 2020) {
+                        print("Result: {d}\n", .{nums.items[i] * nums.items[j] * nums.items[k]});
+                        return;
+                    }
+                }
+            }
+        }
+    }
 }
